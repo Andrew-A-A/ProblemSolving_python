@@ -36,3 +36,8 @@ def dropDuplicateEmails(customers: pd.DataFrame) -> pd.DataFrame:
 def dropMissingData(students: pd.DataFrame) -> pd.DataFrame:
     students = students.dropna(subset='name')
     return students
+
+
+def modifySalaryColumn(employees: pd.DataFrame) -> pd.DataFrame:
+    employees['salary'] *= 2
+    return employees
