@@ -26,3 +26,8 @@ def selectData(students: pd.DataFrame) -> pd.DataFrame:
 def createBonusColumn(employees: pd.DataFrame) -> pd.DataFrame:
     employees['bonus'] = employees['salary'] * 2
     return employees
+
+
+def dropDuplicateEmails(customers: pd.DataFrame) -> pd.DataFrame:
+    customers.drop_duplicates(inplace=True,keep="first",subset='email')
+    return customers
