@@ -74,3 +74,8 @@ def findHeavyAnimals(animals: pd.DataFrame) -> pd.DataFrame:
 def pivotTable(weather: pd.DataFrame) -> pd.DataFrame:
     pivot_df = weather.pivot(index="month", columns="city", values="temperature")
     return pivot_df
+
+
+def meltTable(report: pd.DataFrame) -> pd.DataFrame:
+    melted_df = pd.melt(report, id_vars=["product"], var_name="quarter", value_name="sales")
+    return melted_df
