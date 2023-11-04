@@ -12,3 +12,6 @@ def getDataframeSize(players: pd.DataFrame) -> List[int]:
     columns = len(players.columns)
     rows = len(players)
     return [rows, columns]
+
+def selectFirstRows(employees: pd.DataFrame) -> pd.DataFrame:
+    return employees[0:3]
