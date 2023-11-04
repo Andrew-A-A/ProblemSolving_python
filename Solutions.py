@@ -49,3 +49,8 @@ def renameColumns(students: pd.DataFrame) -> pd.DataFrame:
                                         'last': 'last_name',
                                         'age': 'age_in_years'})
     return students
+
+
+def changeDatatype(students: pd.DataFrame) -> pd.DataFrame:
+    students['grade'] = students['grade'].astype(int)
+    return students
