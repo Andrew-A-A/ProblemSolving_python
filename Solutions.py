@@ -13,5 +13,11 @@ def getDataframeSize(players: pd.DataFrame) -> List[int]:
     rows = len(players)
     return [rows, columns]
 
+
 def selectFirstRows(employees: pd.DataFrame) -> pd.DataFrame:
     return employees[0:3]
+
+
+def selectData(students: pd.DataFrame) -> pd.DataFrame:
+    students = students[students["student_id"] == 101].drop("student_id", axis=1)
+    return students
