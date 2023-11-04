@@ -7,7 +7,10 @@ student_data = [
     [4, 20]
 ]
 df = createDataframe(student_data)
+df2 = createDataframe(student_data)
 getDataframeSize(df)
+
+concatenateTables(df, df2)
 
 print(df)
 print(getDataframeSize(df))
