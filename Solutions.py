@@ -29,5 +29,10 @@ def createBonusColumn(employees: pd.DataFrame) -> pd.DataFrame:
 
 
 def dropDuplicateEmails(customers: pd.DataFrame) -> pd.DataFrame:
-    customers.drop_duplicates(inplace=True,keep="first",subset='email')
+    customers.drop_duplicates(subset='email')
     return customers
+
+
+def dropMissingData(students: pd.DataFrame) -> pd.DataFrame:
+    students = students.dropna(subset='name')
+    return students
