@@ -63,3 +63,9 @@ def fillMissingValues(products: pd.DataFrame) -> pd.DataFrame:
 
 def concatenateTables(df1: pd.DataFrame, df2: pd.DataFrame) -> pd.DataFrame:
     return df1._append(df2)
+
+
+def findHeavyAnimals(animals: pd.DataFrame) -> pd.DataFrame:
+    h = animals[animals['weight'] > 100]
+    h = h.sort_values(by='weight',ascending=False)
+    return h[['name']]
