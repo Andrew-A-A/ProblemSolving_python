@@ -8,5 +8,6 @@ student_data = [
 ]
 df = createDataframe(student_data)
 getDataframeSize(df)
+
 print(df)
 print(getDataframeSize(df))
