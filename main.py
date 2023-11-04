@@ -6,4 +6,7 @@ student_data = [
     [3, 11],
     [4, 20]
 ]
-print(createDataframe(student_data))
+df = createDataframe(student_data)
+getDataframeSize(df)
+print(df)
+print(getDataframeSize(df))

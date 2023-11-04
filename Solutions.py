@@ -5,5 +5,10 @@ import pandas as pd
 
 def createDataframe(student_data: List[List[int]]) -> pd.DataFrame:
     df = pd.DataFrame(student_data, columns=["student_id", "age"])
-
     return df
+
+
+def getDataframeSize(players: pd.DataFrame) -> List[int]:
+    columns = len(players.columns)
+    rows = len(players)
+    return [rows, columns]
