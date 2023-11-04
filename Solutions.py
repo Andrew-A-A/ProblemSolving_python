@@ -67,5 +67,10 @@ def concatenateTables(df1: pd.DataFrame, df2: pd.DataFrame) -> pd.DataFrame:
 
 def findHeavyAnimals(animals: pd.DataFrame) -> pd.DataFrame:
     h = animals[animals['weight'] > 100]
-    h = h.sort_values(by='weight',ascending=False)
+    h = h.sort_values(by='weight', ascending=False)
     return h[['name']]
+
+
+def pivotTable(weather: pd.DataFrame) -> pd.DataFrame:
+    pivot_df = weather.pivot(index="month", columns="city", values="temperature")
+    return pivot_df
