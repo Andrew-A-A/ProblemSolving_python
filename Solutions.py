@@ -21,3 +21,8 @@ def selectFirstRows(employees: pd.DataFrame) -> pd.DataFrame:
 def selectData(students: pd.DataFrame) -> pd.DataFrame:
     students = students[students["student_id"] == 101].drop("student_id", axis=1)
     return students
+
+
+def createBonusColumn(employees: pd.DataFrame) -> pd.DataFrame:
+    employees['bonus'] = employees['salary'] * 2
+    return employees
